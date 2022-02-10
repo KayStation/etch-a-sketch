@@ -10,16 +10,26 @@ body{
 
 #title{
     text-align:center;
+    color:white;
 }
 
 #container{
     display:flex;
+    flex-flow:wrap;
     background-color:rgb(27, 7, 14);
     margin:5% 20%;
 }
 
 .gridBlock{
     flex:1;
-    background-color:red;
-    margin:1em;
+    margin:0.1em;
+    background-color:rgb(180, 46, 80);
+    min-width:0;
+}
+
+hr{
+    width:100%;
+    border:none;
+    padding:0;
+    margin:0;
 }
