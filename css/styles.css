@@ -1,0 +1,25 @@
+html{
+    font-size:20px;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:rgb(68, 55, 92);
+}
+
+#title{
+    text-align:center;
+}
+
+#container{
+    display:flex;
+    background-color:rgb(27, 7, 14);
+    margin:5% 20%;
+}
+
+.gridBlock{
+    flex:1;
+    background-color:red;
+    margin:1em;
+}
