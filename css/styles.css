@@ -1,7 +1,3 @@
-/* ::root{
-    --boxSize:16;
-} */
-
 html{
     font-size:20px;
     margin:0;
@@ -15,6 +11,8 @@ body{
 #title{
     text-align:center;
     color:white;
+    font-size:3em;
+    font-family:Sans-serif;
 }
 
 #resetButton{
@@ -27,10 +25,13 @@ body{
     display:grid;
     background-color:rgb(27, 7, 14);
     margin:0 auto;
-    height:26em;
-    width:26em;
+    height:30em;
+    width:30em;
+    min-width:10em;
+    min-height:10em;
     grid-template-columns: repeat(var(--boxSize), auto);
     grid-template-rows:repeat(var(--boxSize), auto);
+    border:2px solid red;
 }
 
 .gridBlock{
@@ -39,4 +40,5 @@ body{
 
 .hovered{
     background-color:red;
+    box-shadow:0 0 1em red;
 }

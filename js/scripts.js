@@ -1,9 +1,9 @@
 let gridSize = 16;
 
+
 const createRow = function(size){
     const container = document.getElementById('container');
     container.style.setProperty('--boxSize', size);
-
 
     for(let i = 0; i < size; i++){
         const gridItem = document.createElement('griditem');
@@ -12,7 +12,6 @@ const createRow = function(size){
     };
 
 }
-
 
 const addMouseoverToBlock = function(){
     gridBlock = document.getElementsByClassName('gridBlock');
@@ -27,7 +26,7 @@ const addMouseoverToBlock = function(){
     };
 }
 
-
+// Creates a grid out of createRow, and runs hover events to all gridItems.
 const createGrid = function(size){
     for(let i = 0; i < size; i++){
         createRow(size);
@@ -37,7 +36,7 @@ const createGrid = function(size){
 };
 
 
-
+// This is the reset button.
 const btn = document.getElementById('resetButton');
 btn.addEventListener('click', function reset(){
     let newGridSize = prompt('Please enter a new box size. (Max 100)', '16');
@@ -45,6 +44,7 @@ btn.addEventListener('click', function reset(){
         newGridSize = prompt('Please choose a valid size. (Max 100)');
     };
 
+    // Remove original container, and then create a new one.
     document.getElementById("container").remove();
 
     const container = document.createElement('div');
@@ -55,4 +55,5 @@ btn.addEventListener('click', function reset(){
 });
 
 
+// Runs the default page.
 createGrid(gridSize);
