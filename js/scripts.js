@@ -39,8 +39,8 @@ const createGrid = function(size){
 // This is the reset button.
 const btn = document.getElementById('resetButton');
 btn.addEventListener('click', function reset(){
-    let newGridSize = prompt('Please enter a new box size. (Max 100)', '16');
-    while(newGridSize == null || newGridSize > 100){
+    let newGridSize = prompt('Please enter a new box size. (Max 60)', '16');
+    while(newGridSize == null || newGridSize > 60){
         newGridSize = prompt('Please choose a valid size. (Max 100)');
     };
 
