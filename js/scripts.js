@@ -2,12 +2,12 @@ let gridSize = 16;
 
 const createRow = function(size){
     const container = document.getElementById('container');
-    container.style.setProperty('--boxSize', gridSize);
+    container.style.setProperty('--boxSize', size);
+
 
     for(let i = 0; i < size; i++){
         const gridItem = document.createElement('griditem');
         gridItem.classList.add('gridBlock');
-        gridItem.textContent = '\u00a0';
         container.appendChild(gridItem);
     };
 
@@ -38,10 +38,21 @@ const createGrid = function(size){
 
 
 
-// Create reset button function
-const reset = function(newSize){
+const btn = document.getElementById('resetButton');
+btn.addEventListener('click', function reset(){
+    let newGridSize = prompt('Please enter a new box size. (Max 100)', '16');
+    while(newGridSize == null || newGridSize > 100){
+        newGridSize = prompt('Please choose a valid size. (Max 100)');
+    };
 
-};
+    document.getElementById("container").remove();
+
+    const container = document.createElement('div');
+    container.id = 'container'
+    document.body.appendChild(container);
+
+    createGrid(newGridSize);
+});
 
 
 createGrid(gridSize);
